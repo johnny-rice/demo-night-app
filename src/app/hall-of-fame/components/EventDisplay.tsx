@@ -56,13 +56,15 @@ export default function EventDisplay({ events }: EventDisplayProps) {
         </div>
       </div>
       <div className="flex w-full flex-col gap-8 pt-4">
-        {selectedEvent.awards.map((award) => (
-          <AwardWinnerItem
-            key={award.id}
-            award={award}
-            demos={selectedEvent.demos}
-          />
-        ))}
+        {selectedEvent.awards
+          .filter((award) => award.winnerId)
+          .map((award) => (
+            <AwardWinnerItem
+              key={award.id}
+              award={award}
+              demos={selectedEvent.demos}
+            />
+          ))}
       </div>
       <div className="mt-12 flex w-full flex-col gap-2">
         <h2 className="font-kallisto text-2xl font-bold text-black">

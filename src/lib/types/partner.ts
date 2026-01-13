@@ -20,7 +20,7 @@ export const DEFAULT_PARTNERS: Partner[] = [
     name: "The AI Collective",
     url: "https://www.aicollective.com",
     description:
-      "We gather pioneers on the frontier of AI to exchange insights, deepen our human connection, and drive collective progress.",
+      "We are building the human layer for the AI era – uniting people in forums worldwide to navigate the rapid acceleration of technological progress.",
   },
   // {
   //   name: "Product Hunt",

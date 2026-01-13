@@ -16,7 +16,7 @@ export default function PresentationHeader() {
           isPitchNight={branding.isPitchNight}
         />
         <div className="flex w-full flex-1 flex-row items-center justify-between px-3">
-          <Logos size={36} logoPath={branding.logoPath} />
+          <Logos size="sm" logoPath={branding.logoPath} />
           <h1 className="mt-1 line-clamp-1 text-ellipsis px-1 font-marker text-xl font-bold tracking-tight">
             {currentEvent?.name ?? ""}
           </h1>

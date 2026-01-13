@@ -70,7 +70,7 @@ export default function RecapWorkspace() {
             setEventFeedback({ ...eventFeedback, comment: e.target.value })
           }
           className="z-10 mt-2 block w-full resize-none rounded-lg border-2 border-gray-200 bg-white/60 p-2 text-lg font-medium backdrop-blur"
-          placeholder={`What'd ya think?! How can we make these community demo nights even better?`}
+          placeholder={`What did you think? How can we make these events even better?`}
         />
         <ContributeButton />
       </div>

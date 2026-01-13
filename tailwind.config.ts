@@ -71,6 +71,11 @@ export default {
           ...fontFamily.sans,
         ],
       },
+      screens: {
+        xs: "500px",
+        "2xl": "1400px",
+        "7xl": "1536px",
+      },
       borderRadius: {
         "3xl": "calc(var(--radius) * 2.5)",
         "2xl": "calc(var(--radius) * 2)",

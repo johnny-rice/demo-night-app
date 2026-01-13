@@ -14,7 +14,7 @@ export default function ErrorPage() {
   );
   return (
     <main className="flex min-h-screen w-full flex-col items-center justify-center pb-16 font-kallisto text-black">
-      <Logos size={120} logoPath={branding.logoPath} />
+      <Logos size="lg" logoPath={branding.logoPath} />
       <h1 className="pt-4 text-center text-2xl font-semibold">
         Something went wrong 🥲
       </h1>

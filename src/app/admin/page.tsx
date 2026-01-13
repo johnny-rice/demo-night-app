@@ -56,8 +56,8 @@ export default function AdminHomePage() {
   return (
     <main className="min-h-screen bg-gray-50">
       <header className="sticky top-0 z-10 border-b bg-white/60 shadow-sm backdrop-blur">
-        <div className="container mx-auto flex items-center justify-between gap-1 px-8 py-2">
-          <Logos size={36} logoPath={branding.logoPath} />
+        <div className="container mx-auto flex max-w-screen-lg items-center justify-between gap-1 px-4 py-2 md:px-8">
+          <Logos size="sm" logoPath={branding.logoPath} />
           <div className="flex flex-col items-center justify-center">
             <h1 className="line-clamp-1 font-marker text-xl font-bold leading-6 tracking-tight">
               {branding.appName} App
@@ -66,10 +66,10 @@ export default function AdminHomePage() {
               Admin Dashboard
             </span>
           </div>
-          <div className="flex w-[108px] items-center justify-end" />
+          <div className="flex w-[68px] items-center justify-end" />
         </div>
       </header>
-      <div className="container mx-auto p-8">
+      <div className="container mx-auto max-w-screen-lg p-4 sm:px-8">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-2xl font-bold">Events</h2>
           <Button onClick={() => showUpsertEventModal()}>
@@ -77,7 +77,7 @@ export default function AdminHomePage() {
             Create Event
           </Button>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="xs:gap-4 flex flex-col gap-2">
           {isLoading ? (
             <>
               <EventSkeleton />
@@ -130,11 +130,11 @@ export default function AdminHomePage() {
                           )}
                         </CardTitle>
                         <div className="mt-1 flex items-center gap-1 text-sm font-medium">
-                          <CalendarIcon className="h-4 w-4" />
-                          <span className="first-letter:capitalize">
+                          <CalendarIcon className="h-4 w-4 shrink-0" />
+                          <span className="shrink-0 truncate first-letter:capitalize">
                             {getDaysAgo(event.date)}
                           </span>
-                          <span className="text-muted-foreground">
+                          <span className="truncate text-muted-foreground">
                             (
                             {event.date.toLocaleDateString("en-US", {
                               timeZone: "UTC",
@@ -147,13 +147,13 @@ export default function AdminHomePage() {
                           </span>
                         </div>
                       </div>
-                      <div className="flex items-center gap-6">
+                      <div className="flex flex-col items-center gap-1 md:flex-row md:gap-6">
                         <div className="flex items-center gap-2 text-sm">
                           <Presentation className="h-4 w-4 text-muted-foreground" />
                           <span className="font-medium">
                             {event._count.demos}
                           </span>
-                          <span className="text-muted-foreground">
+                          <span className="xs:block hidden text-muted-foreground">
                             {event._count.demos === 1 ? "demo" : "demos"}
                           </span>
                         </div>
@@ -162,7 +162,7 @@ export default function AdminHomePage() {
                           <span className="font-medium">
                             {event._count.attendees}
                           </span>
-                          <span className="text-muted-foreground">
+                          <span className="xs:block hidden text-muted-foreground">
                             {event._count.attendees === 1
                               ? "attendee"
                               : "attendees"}
