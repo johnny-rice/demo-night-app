@@ -112,7 +112,7 @@ function SubmitDemoMessagePage({
 
   return (
     <main className="flex min-h-screen w-full flex-col items-center justify-center px-4 pb-16 text-center font-kallisto text-black">
-      <Logos size={120} logoPath={branding.logoPath} />
+      <Logos size="lg" logoPath={branding.logoPath} />
       <h1 className="pt-4 text-center text-2xl font-bold">{title}</h1>
       <p className="text-lg font-semibold italic text-gray-500">{message}</p>
       <LinkButton href={event.url}>Back to event</LinkButton>

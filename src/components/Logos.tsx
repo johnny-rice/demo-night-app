@@ -6,18 +6,20 @@ import React from "react";
 import { type ReactNode } from "react";
 
 export default function Logos({
-  size,
+  size = "sm",
   className,
   logoPath,
 }: {
-  size?: number;
+  size: "sm" | "lg";
   className?: string;
   logoPath: string;
 }): ReactNode {
+  const logoSize = size === "sm" ? 32 : 110;
   return (
     <div
       className={cn(
-        "flex flex-row items-center justify-center gap-0",
+        `flex flex-row items-center justify-center`,
+        size === "sm" ? "gap-1" : "gap-4",
         className,
       )}
     >
@@ -25,24 +27,24 @@ export default function Logos({
         src={logoPath}
         id="logo"
         alt="logo"
-        width={size}
-        height={size}
+        width={logoSize}
+        height={logoSize}
         className="logo"
       />
       <Image
         src="/images/ai-collective.png"
         id="logo"
         alt="logo"
-        width={size}
-        height={size}
+        width={logoSize}
+        height={logoSize}
         className="logo"
       />
       {/* <Image
         src="/images/produnt-hunt.png"
         id="logo"
         alt="logo"
-        width={size}
-        height={size}
+        width={logoSize}
+        height={logoSize}
         className="logo"
       /> */}
     </div>
